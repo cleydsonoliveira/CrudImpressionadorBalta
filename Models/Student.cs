@@ -13,11 +13,13 @@ namespace CrudImpressionadorBalta.Models
         [StringLength(80, ErrorMessage = "O nome deve cconter até 80 caracteres")]
         [MinLength(5, ErrorMessage = "O nome deve conter no mínimo 5 caracteres")]
         [DisplayName("Nome completo")]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Informe o e-mail")]
         [EmailAddress(ErrorMessage = "E-mail inválido")]
         [DisplayName("E-mail")]
         public string Email { get; set; } = string.Empty;
+
+        public List<Premium> Premiumns { get; set; } = new();
     }
 }
